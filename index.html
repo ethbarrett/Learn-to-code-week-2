@@ -12,7 +12,7 @@
         }
             
             
-    var userChoice = prompt("Do you choose rock, paper or scissors?");
+    var userChoice = document.getElementById('selector').getAttribute("value");
     var computerChoice = Math.random();
     if (computerChoice <= 0.33) {
         computerChoice = "rock";
@@ -53,16 +53,20 @@
   </head>
   <body>
     <div class="wrapper">
-      <button class="button btn btn-default" onclick="compare(userChoice, computerChoice);">LETS PLAY RPS!</button>
         <button class="button btn btn-default" onclick="reloadButton();">LETS PLAY RPS AGAIN!</button>
     </div>
 
+      <div class="wrapper">
+      <select name="selector" id="selector">
+  <option value="rock">Rock</option>
+  <option value="paper">Paper</option>
+  <option value="scissors">Scissors</option>
+</select>
+         <button class="btn btn-default" onclick="compare(userChoice, computerChoice);">Submit!</button> 
+ </div>
       
- 
-      
-      
-   
-      
+
+
       
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 

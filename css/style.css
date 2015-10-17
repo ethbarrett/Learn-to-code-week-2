@@ -1,3 +1,7 @@
+* {
+    font-size: 3em;   
+}
+
 .wrapper {
     text-align: center;
 }
@@ -5,8 +9,6 @@
 .button {
     position: relative;
     top: 50%;
-    width: 200px;
-    height: 100px;
     display: inline-block;
     margin: 10px;
 }
@@ -14,3 +16,6 @@
 
  body {
     background-image: url("http://media.collegetimes.com/uploads/2014/07/67443-duffman-gif-UvkO.gif");
+ }
+
+
