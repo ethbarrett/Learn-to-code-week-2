@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-    <script>
-
+      
+   
+      <script>
+        
+        function reloadButton() {
+            window.location.reload();
+        }
+            
+            
     var userChoice = prompt("Do you choose rock, paper or scissors?");
-
     var computerChoice = Math.random();
-
     if (computerChoice <= 0.33) {
         computerChoice = "rock";
     } else if (computerChoice <= 0.66) {
@@ -15,13 +21,11 @@
     } else {
         computerChoice = "scissors";
     }
-
     var compare = function(userChoice, computerChoice) {
         if (userChoice  === computerChoice) {
               window.alert("The result is a tie!");
           } else if(userChoice ==="rock") {
             if (computerChoice==="scissors") {
-
                 window.alert("Rock wins!");
           } else {
                 window.alert("Paper wins");
@@ -34,21 +38,34 @@
                  window.alert("scissors wins!");
              }
           }
-
           else if(userChoice==="scissors") {
               if (computerChoice==="rock") {
-                  window.alert("scissors wins!");
+                  window.alert("Rock wins");
               } else {
                   window.alert("scissors wins");
               }
           }
       };
+          
+          
+
     </script>
   </head>
   <body>
     <div class="wrapper">
-      <button class="button" onclick="compare(userChoice, computerChoice);">LETS PLAY RPS!</button>
+      <button class="button btn btn-default" onclick="compare(userChoice, computerChoice);">LETS PLAY RPS!</button>
+        <button class="button btn btn-default" onclick="reloadButton();">LETS PLAY RPS AGAIN!</button>
     </div>
+
+      
+ 
+      
+      
+   
+      
+      
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
   </body>
 
 </html>
